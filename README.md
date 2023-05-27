@@ -6,7 +6,7 @@
 
 ## Steps
 🏷️ Drops `-SNAPSHOT` and pushes a git tag (`1.0.0-SNAPSHOT` &rarr; `1.0.0`) <br>
-📦 Creates a release for the current version <br>
+📦 Creates a GitHub release for the current version <br>
 📷 Bumps version to the next incremental `-SNAPSHOT` (`1.0.0` &rarr; `1.0.1-SNAPSHOT`) <br>
 
 <br>
