@@ -1,6 +1,6 @@
 ![NPM](https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white)
 # npm-version-action
-*Releases current version and bumps to next incremental `-SNAPSHOT`*
+*Releases current version and bumps to next incremental* `-SNAPSHOT`
 
 <br>
 
