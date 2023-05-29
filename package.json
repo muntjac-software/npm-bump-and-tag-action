@@ -1,0 +1,22 @@
+{
+  "name": "npm-version-action",
+  "version": "0.0.0",
+  "description": "GitHub Action for handling package.json version bumps",
+  "main": "src/main.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/muntjac-software/npm-version-action.git"
+  },
+  "author": "JRSmiffy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/muntjac-software/npm-version-action/issues"
+  },
+  "homepage": "https://github.com/muntjac-software/npm-version-action#readme",
+  "dependencies": {
+    "@vercel/ncc": "^0.36.1"
+  }
+}
