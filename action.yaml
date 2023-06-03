@@ -1,0 +1,10 @@
+# https://help.github.com/en/articles/metadata-syntax-for-github-actions
+name: "NPM Version"
+description: "GitHub Action for handling package.json version bumps and GitHub releases"
+author: "muntjac-software"
+runs:
+  using: node16 # Question :: do I need to change my v18?
+  main: "dist/index.js"
+branding:
+  color: gray-dark
+  icon: "arrow-up-circle"

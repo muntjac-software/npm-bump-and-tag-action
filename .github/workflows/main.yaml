@@ -1,0 +1,20 @@
+name: CI
+on: push
+
+jobs:
+#  test:
+#    runs-on: ubuntu-latest
+#    steps:
+#      - uses: actions/checkout@v2
+#      - uses: actions/setup-node@v3
+#        with:
+#          node-version: '18.x'
+#      - run: npm install
+#      - run: npm test
+  execute:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Execute Action
+        uses: ./
+
+# Note :: Requires the Docker Engine to be started
