@@ -1,8 +1,8 @@
 import each from 'jest-each';
-import { run } from '../main';
+import { run } from '../bump';
 const packageJson = require('../../package.json')
 
-describe('NPM Version Tests', () => {
+describe('Bump Tests', () => {
     each([
         ['0.0.1-SNAPSHOT', '0.0.2-SNAPSHOT'],
         ['0.1.0-SNAPSHOT', '0.1.1-SNAPSHOT'],
@@ -18,5 +18,4 @@ describe('NPM Version Tests', () => {
         // then:
         expect(packageJson.version).toEqual(endVersion);
     });
-
 });
