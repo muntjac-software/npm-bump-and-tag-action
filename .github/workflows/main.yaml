@@ -1,20 +1,36 @@
-name: CI
-on: push
-
-jobs:
-#  test:
+#name: CI
+#on: push
+#
+#jobs:
+##  test:
+##    runs-on: ubuntu-latest
+##    steps:
+##      - uses: actions/checkout@v2
+##      - uses: actions/setup-node@v3
+##        with:
+##          node-version: '18.x'
+##      - run: npm install
+##      - run: npm test
+#  execute:
 #    runs-on: ubuntu-latest
 #    steps:
-#      - uses: actions/checkout@v2
-#      - uses: actions/setup-node@v3
-#        with:
-#          node-version: '18.x'
-#      - run: npm install
-#      - run: npm test
-  execute:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Execute Action
-        uses: ./
+#      - name: Execute Action
+#        uses: ./
+#
+## Note :: Requires the Docker Engine to be started
 
-# Note :: Requires the Docker Engine to be started
+on: [push]
+
+jobs:
+  custom_test:
+    runs-on: ubuntu-latest
+    name: We test it locally with act
+    steps:
+      - name: Get Pokemon name
+        uses: ./ # Uses an action in the root directory
+        id: pokemon
+        with:
+          pokemon_id: 150
+      - name: Get the pokemon
+        run: echo "${{ steps.pokemon.outputs.pokemon_name }} attack"
+

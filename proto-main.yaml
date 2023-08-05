@@ -1,11 +1,11 @@
-name: tag-release-bumpsnapshot
+name: tag-release-snapshot
 on:
   push:
     branches: [ main ]
 permissions:
   contents: write
 jobs:
-  tag-release-bumpsnapshot:
+  tag-release-snapshot:
     concurrency: ci-${{ github.ref }}
     runs-on: ubuntu-latest
     steps:

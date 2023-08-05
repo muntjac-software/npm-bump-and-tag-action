@@ -1,10 +1,27 @@
 # https://help.github.com/en/articles/metadata-syntax-for-github-actions
-name: "NPM Version"
-description: "GitHub Action for handling package.json version bumps and GitHub releases"
-author: "muntjac-software"
+#name: "NPM Version"
+#description: "GitHub Action for handling package.json version bumps and GitHub releases"
+#author: "muntjac-software"
+#runs:
+#  using: node16 # Question :: do I need to change my v18?
+#  main: "dist/index.js"
+#branding:
+#  color: gray-dark
+#  icon: "arrow-up-circle"
+
+
+name: 'Blog Custom Github Action'
+description: 'Call an API and get the result'
+inputs:
+  pokemon_id:
+    description: 'number of the pokemon in the pokedex'
+    required: true
+    default: 1
+outputs:
+  pokemon_name:
+    description: 'Name des Pokemons'
 runs:
-  using: node16 # Question :: do I need to change my v18?
-  main: "dist/index.js"
-branding:
-  color: gray-dark
-  icon: "arrow-up-circle"
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.pokemon_id}}
